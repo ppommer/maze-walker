@@ -7,5 +7,5 @@ This algorithm's aim is to help as many poor penguins as possible. The penguins 
 At the beginning, the program asks the user for the desired size of the labyrinth and the desired maximum distance from the starting point. After execution of the program, the number of penguins that could be rescued is displayed.
 
 ## Example
-![alt text](https://raw.githubusercontent.com/ppommer/maze-walker/master/maze.jpg?token=AL6HJ7QSJ6XEFOVQIWRQMKC6MO4BQ)
+![alt text](https://raw.githubusercontent.com/ppommer/maze-walker/master/maze.jpg)
 _width = 48 | length = 27 | max. distance = 100_
