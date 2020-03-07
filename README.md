@@ -1,2 +1,3 @@
-# maze-walker
-Algorithm that attempts to find hungry penguins trapped in a maze and save them from starving by recursively walking through that maze.
+# Maze Walker
+
+Programming exercise in the course of the practical lecture _Fundamentals of Programming_ (IN0002) at the Technical University of Munich.
