@@ -8,4 +8,4 @@ At the beginning, the program asks the user for the desired size of the labyrint
 
 ## Example
 ![alt text](maze.jpg)
-_width = 48 | length = 27 | max. distance = 100_
+_Parameters: width = 48 | length = 27 | max. distance = 100_
