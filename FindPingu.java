@@ -1,19 +1,43 @@
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 @SuppressWarnings("serial")
 public class FindPingu extends Maze {
   static int[][] maze;
 
+  public static int read(String text) {
+    JFrame frame = new JFrame();
+    String s = JOptionPane.showInputDialog(frame, text);
+    frame.dispose();
+
+    int x;
+    if (s == null)
+      System.exit(0);
+    try {
+      x = Integer.parseInt(s.trim());
+    } catch (NumberFormatException e) {
+      x = read(text);
+    }
+    return x;
+  }
+
+  public static void write(String output) {
+    JFrame frame = new JFrame();
+    JOptionPane.showMessageDialog(frame, output, "Ausgabe", JOptionPane.PLAIN_MESSAGE);
+    frame.dispose();
+  }
+
   public static void main(String[] args) {
-    int width = MiniJava.read("Breite des Labyrinths?");
-    int height = MiniJava.read("Höhe des Labyrinths?");;
+    int width = read("Please enter the width of the maze:");
+    int height = read("Please enter the height of the maze:");;
     maze = generateStandardPenguinMaze(width, height);
-    int maxDistance = MiniJava.read("Wie weit trauen Sie sich maximal weg vom Startpunkt?");
+    int maxDistance = read("Please enter the maximum distance:");
     if(width < 3 || height < 3 || maxDistance < 1) {
-      MiniJava.write("Fehlerhafte Eingabe!");
+      write("Wrong input!");
       return;
     }
     int penguins = walk(1, 0, maxDistance);
-    System.out.println("Gerettete Pinguine: " + penguins);
+    System.out.println("Number of rescued penguins: " + penguins);
   }
 
   // test if there is a wall at the given coordinates
@@ -86,6 +110,4 @@ public class FindPingu extends Maze {
 
     return penguins;
   }
-
 }
-
